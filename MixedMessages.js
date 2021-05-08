@@ -1,5 +1,5 @@
 //Store the gender
-let gender = ["boy", "girl"]
+let genders = ["boy", "girl"];
 //Store a list of boys names to choose from
 let boysnames = [
     "Liam",
@@ -102,7 +102,7 @@ let boysnames = [
     "Parker",
     "Wesley",
     "Kai"
-]
+];
 //Store a list of girls names to choose from
 let girlsnames = [
     "Olivia",
@@ -205,8 +205,7 @@ let girlsnames = [
     "Peyton",
     "Julia",
     "Rylee"
-]
-
+];
 //store a list of personality traits
 let traits = [
     "happy",
@@ -282,8 +281,7 @@ let traits = [
     "tidy",
     "winning",
     "a natural leader"
-]
-
+];
 //store a list of potential jobs to choose from
 let joblist = [
     "an accountant",
@@ -354,7 +352,34 @@ let joblist = [
     "a film producer",
     "a music producer",
     "a pro gamer" 
-]
-
-console.log(traits.length)
-console.log(joblist.length)
+];
+//initializes random gender
+let gender = genders[Math.floor(Math.random()*2)];
+let babyname;
+let partnername
+//initializes random name and partner name based on gender
+if (gender === "boy") {
+    babyname = boysnames[Math.floor(Math.random()*100)];
+    partnername = girlsnames[Math.floor(Math.random()*100)];
+} else {
+    babyname = girlsnames[Math.floor(Math.random()*100)];
+    partnername = boysnames[Math.floor(Math.random()*100)];
+}
+//initializes random traits
+let chosentrait = []
+while (chosentrait.length <= 5) {
+    let temptrait = traits[Math.floor(Math.random()*73)]
+    if (chosentrait.includes(temptrait)) {
+        continue
+    } else {
+        chosentrait.push(temptrait);
+    }
+}
+//initializes random work
+let occupation = joblist[Math.floor(Math.random()*68)];
+//initializes random number of kids
+let numkids = Math.floor(Math.random()*5);
+//initializes random marriage age
+let marriageage = Math.floor(Math.random()*11) + 20;
+//output the desired message
+console.log(`If you have a ${gender} named ${babyname} they will be ${chosentrait[0]}, ${chosentrait[1]}, ${chosentrait[2]}, ${chosentrait[3]} and ${chosentrait[4]}.\nThey will grow up to become ${occupation}.\nThey will have ${numkids} children.\nThey will marry someone named ${partnername} at age ${marriageage}`);
