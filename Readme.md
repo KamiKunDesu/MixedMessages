@@ -31,4 +31,4 @@ I decided to make a program which would give you a message telling you the vario
 
 ## Setup
 
-This project should run on almost all basic computers and does not require any special libraries or programs to run. Simply launce the project from the commandline using any package which can run Node.
+This project should run on almost all basic computers and does not require any special libraries or programs to run. Simply launch the project from the commandline using any package which can run Node.
